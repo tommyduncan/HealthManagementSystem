@@ -1,0 +1,8 @@
+﻿bin/*
+!/[Pp]lugins
+!/[Pp]lugins/android.json
+!/[Pp]lugins/fetch.json
+!/[Pp]lugins/windows.json
+!/[Pp]lugins/ios.json
+[Pp]lugins/*
+[Pp]latforms/*
