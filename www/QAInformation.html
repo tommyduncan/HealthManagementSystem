@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">Q&A</p>
+        <hr /><br/>
+            <form>
+                <div class="form-group">
+                    <label for="Input_Name">姓名</label>
+                    <input type="text" class="form-control" id="Input_Name" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Input_Email">EMAIL</label>
+                    <input type="email" class="form-control" id="Input_Email" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="Input_Name">連絡電話</label>
+                    <input type="tel" class="form-control" id="Input_Phone" value="">
+                </div>
+                <div class="form-group">
+                    <label for="Input_Message">Message</label>
+                    <textarea class="form-control" rows="5" id="Input_Message"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-sm-6"><input id="Btn_Clear" type="button" value="清空" class="Btn_LWidth"  onclick="Claer()"/></div>
+                    <div class="form-group col-sm-6"><input id="Btn_Send" type="button" value="送出" class="Btn_LWidth" onclick="Send()" /></div>
+                </div>
+            </form>
+</div>
+</body>
+</html>
+<script>
+    function Claer()
+    {
+        $("#Input_Name").val('');
+        $("#Input_Email").val('');
+        $("#Input_Phone").val('');
+        $("#Input_Message").val('');
+    }
+    function Send()
+    {
+        alert('送出成功');
+    }
+</script>

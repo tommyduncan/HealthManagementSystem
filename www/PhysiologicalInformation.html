@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/daterangepicker.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/moment.min.js"></script>
+    <script src="scripts/daterangepicker.js"></script>
+    <script src="scripts/Chart.bundle.min.js"></script>
+    <script src="scripts/Chart.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">生理資訊</p>
+        <input id="Btn_HA" type="button" value="衛教建議" class="Btn_NWidth" onclick="javascript:location.href='HealthAdvice.html'" />
+        <hr /><br/>
+        <form>
+            <br />
+            <div class="form-row">
+                <div class="form-group col-4">選取日期</div><div class="form-group col-8"><input type="text" name="daterange" value="2017/11/01 - 2015/11/30" class="form-control"/></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-4"><input id="CB_Weight" type="checkbox" value="Weight" />體重</div>
+                <div class="form-group col-4"><input id="CB_BloodPressure" type="checkbox" value="BloodPressure" />血壓</div>
+                <div class="form-group col-4"><input id="CB_WC" type="checkbox" value="WC" />腰圍</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-4"><input id="CB_GH" type="checkbox" value="GH" />糖化血色素</div>
+                <div class="form-group col-4"><input id="CB_FBS" type="checkbox" value="FBS" />空腹血糖</div>
+                <div class="form-group col-4"><input id="CB_UN" type="checkbox" value="UN" />尿素氮</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-4"><input id="CB_Creatinine" type="checkbox" value="Creatinine" />肌酸酐</div>
+                <div class="form-group col-4"><input id="CB_GFR" type="checkbox" value="GFR" />腎絲球過濾率</div>
+                <div class="form-group col-4"><input id="CB_Cholesterol" type="checkbox" value="Cholesterol" />總膽固醇</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-4"><input id="CB_TG" type="checkbox" value="TG" />三酸甘油脂</div>
+                <div class="form-group col-4"><input id="CB_LDL" type="checkbox" value="LDL" />低密度脂蛋白</div>
+                <div class="form-group col-4"><input id="CB_Proteinuria" type="checkbox" value="Proteinuria" />蛋白尿</div>
+            </div>
+</form>
+        <hr class="hr_color" /><br />
+        <div id="Div_DisplayBlock">
+            <form>
+                <div class="form-row" id="Div_Weight" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-12"><p class="P_Bolder">體重</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">78</div><div class="form-group col-3">82</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">體重趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_Weight_IMG" class="Div_Img"></div></div>
+                </div>
+                <div class="form-row" id="Div_BloodPressure" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-12"><p class="P_Bolder">血壓&nbsp;(收縮壓)</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">71</div><div class="form-group col-3">91</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">血壓&nbsp;(舒張壓)</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">109</div><div class="form-group col-3">130</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">血壓趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_BloodPressure_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_WC" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-12"><p class="P_Bolder">腰圍</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">93</div><div class="form-group col-3">96</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">腰圍趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_WC_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_GH" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-12"><p class="P_Bolder">糖化血色素</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">6.9</div><div class="form-group col-3">7.2</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">糖化血色素趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_GH_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_FBS" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-12"><p class="P_Bolder">空腹血糖</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">103</div><div class="form-group col-3">121</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">空腹血糖趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_FBS_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_UN" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-12"><p class="P_Bolder">尿素氮</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">6</div><div class="form-group col-3">9</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">尿素氮趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_UN_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_Creatinine" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-8"><p class="P_Bolder">肌酸酐</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">0.8</div><div class="form-group col-3">1.2</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">肌酸酐趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_Creatinine_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_GFR" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-8"><p class="P_Bolder">腎絲球過濾率</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">84</div><div class="form-group col-3">89</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">腎絲球過濾率趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_GFR_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_Cholesterol" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-8"><p class="P_Bolder">總膽固醇</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">172</div><div class="form-group col-3">189</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">總膽固醇趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_Cholesterol_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_TG" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-8"><p class="P_Bolder">三酸甘油脂</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">172</div><div class="form-group col-3">189</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">三酸甘油脂趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_TG_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_LDL" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-8"><p class="P_Bolder">低密度脂蛋白</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">150</div><div class="form-group col-3">169</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">低密度脂蛋白趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_LDL_IMG"></div></div>
+                </div>
+                <div class="form-row" id="Div_Proteinuria" name="Div_Avg_DefaultHide">
+                    <div class="form-group col-8"><p class="P_Bolder">蛋白尿</p></div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">最低</div><div class="form-group col-3">最高</div><div class="w-100"></div>
+                    <div class="form-group col-3"></div><div class="form-group col-3">140</div><div class="form-group col-3">160</div><div class="w-100"></div>
+                    <div class="form-group col-12"><p class="P_Bolder">蛋白尿趨勢</p></div><div class="w-100"></div>
+                    <div class="form-group col-12"><div id="Div_Proteinuria_IMG"></div></div>
+                </div>
+            </form>
+        </div><br />
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(function () {
+        $('input[name="daterange"]').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            locale: {
+                format: 'YYYY/MM/DD'
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var config = '';
+    var Date_List = ["11/01", "11/02", "11/03", "11/04", "11/05", "11/06", "11/07", "11/08", "11/09", "11/10", "11/11", "11/12", "11/13", "11/14", "11/15", "11/16", "11/17", "11/18", "11/19", "11/20", "11/21", "11/22", "11/23", "11/24", "11/25", "11/26", "11/27", "11/28", "11/29", "11/30"];
+    //體重
+    var Data_Weight = [80, 81, 81, 80, 80, 80, 79, 79, 79, 80, 80, 80, 81, 81, 81, 82, 82, 81, 80, 80, 80, 80, 79, 78, 78, 79, 80, 81, 81, 80];
+    //血壓
+    var Data_BloodPressure_L = [81, 91, 83, 77, 71, 75, 74, 75, 76, 86, 79, 77, 87, 83, 78, 83, 81, 73, 79, 75, 78, 81, 82, 80, 79, 81, 79, 81, 75, 81];
+    var Data_BloodPressure_H = [130, 139, 116,111,110, 109, 118, 118, 125, 126, 120, 120, 129, 134, 113, 119, 123, 124,121, 108, 122, 121, 125, 126, 120, 109, 130, 115, 132,113];
+    //腰圍
+    var Data_WC = [94, 95, 95, 95, 94, 94, 95, 95, 94, 94, 95, 95, 95, 95, 94, 94, 94, 95, 96, 95, 95, 95, 94, 93, 93, 93, 94, 94, 94, 95];
+    //糖化血色素
+    var Data_GH = [6.9, 6.9, 7.0, 7.0, 7.0, 7.0, 7.0, 7.1, 7.1, 7.0, 7.0, 7.0, 7.0, 7.1, 7.1, 7.1, 7.2, 7.1, 7.1, 7.0, 7.0, 7.0, 7.0, 7.0, 6.9, 6.9, 6.9, 7.0, 7.0, 7.0];
+    //空腹血糖
+    var Data_FBS = [117, 116, 113, 114, 115, 119, 118, 112, 121, 117, 109, 117, 120, 119, 111, 113, 114, 116, 120, 103, 113, 117, 120, 111, 115, 116, 118, 117, 113, 115];
+    //尿素氮
+    var Data_UN = [6, 6, 7, 7, 8, 8, 8, 9, 7, 8, 8, 7, 7, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 8, 8, 8, 8, 8];
+    //肌酸酐
+    var Data_Creatinine = [0.9, 0.8, 0.8, 0.7, 0.9, 0.9, 1.1, 1.1, 1.1, 1.0, 1.0, 1.0, 0.9, 0.9, 0.9, 1.0, 1.1, 1.2, 1.0, 1.0, 0.9, 0.8, 0.8, 0.9, 0.9, 0.8, 0.9, 1.0, 1.0, 1.0];
+    //腎絲球過濾率
+    var Data_GFR = [85, 86, 86, 87, 87, 88, 88, 89, 87, 88, 84, 85, 85, 85, 86, 86, 87, 87, 84, 84, 88, 88, 87, 89, 89, 85, 85, 85, 86, 87];
+    //腎絲球過濾率
+    var Data_Cholesterol = [180, 186, 176, 187, 173, 183, 172, 179, 177, 178, 174, 185, 185, 180, 186, 186, 187, 183, 184, 180, 188, 178, 187, 189, 189, 180, 175, 175, 186, 187];
+    //三酸甘油脂
+    var Data_TG = [180, 186, 176, 187, 173, 183, 172, 179, 177, 178, 174, 185, 185, 180, 186, 186, 187, 183, 184, 180, 188, 178, 187, 189, 189, 180, 175, 175, 186, 187];
+    //低密度脂蛋白
+    var Data_LDL = [160, 153, 158, 169, 160, 162, 163, 160, 165, 153, 152, 150, 160, 164, 166, 160, 169, 162, 154, 150, 160, 160, 167, 159, 169, 160, 165, 150, 160, 160];
+    //蛋白尿
+    var Data_Proteinuria = [150, 153, 158, 149, 150, 152, 143, 150, 145, 153, 152, 150, 140, 154, 156, 140, 159, 152, 154, 150, 145, 150, 147, 159, 159, 150, 145, 150, 160, 150];
+
+    function SetConfig(LB_data, LB_title,DataName)
+    {
+        config = {
+            type: 'line',
+            data: {
+                labels: Date_List,
+                datasets: [{
+                    label: LB_data,
+                    backgroundColor: '#A3D5D2',
+                    borderColor: '#A3D5D2',
+                    data: window[DataName],
+                    fill: false,
+                }/*, {
+                    label: "My Second dataset",
+                    fill: false,
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                }*/]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: LB_title
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Date'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+    }
+
+    function SetConfig_TwoData(LB_data, LB_data2, LB_title, DataName,DataName2)
+    {
+        config = {
+            type: 'line',
+            data: {
+                labels: Date_List,
+                datasets: [{
+                    label: LB_data,
+                    backgroundColor: '#A3D5D2',
+                    borderColor: '#A3D5D2',
+                    data: window[DataName],
+                    fill: false,
+                }, {
+                    label: LB_data2,
+                    fill: false,
+                    backgroundColor: '#ECD287',
+                    borderColor: '#ECD287',
+                    data: window[DataName2],
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: LB_title
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Date'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+    }
+
+    $(document).ready(function () {
+
+        //Default
+        $("#Div_SportTime").hide();
+        $('div[name=Div_Avg_DefaultHide]').hide(); //Hide all div(name=DivDefaulHide)
+        $('input[type=checkbox]').prop("checked", false);
+
+        //Checkbox Check Change Event
+        $('input[type=checkbox]').change(function () {
+            var Div_ID = 'Div' + (this.id).substring(2); //Get ID
+            var Div_Chart_ID = 'Div' + (this.id).substring(2) + '_IMG';
+            var Canvas_ID = 'Canvas' + (this.id).substring(2);
+            var DataName = 'Data' + (this.id).substring(2);
+            if (this.checked)
+            {
+                $("#" + Div_ID).show(); //Display the Div
+                //Show the Chart
+                $("#" + Div_Chart_ID).append("<canvas id='" + Canvas_ID + "'></canvas>");
+                var ChartTitle = $('#' + Div_ID).children().children().html();
+                if (Div_ID != "Div_BloodPressure")
+                {
+                    SetConfig(ChartTitle, ChartTitle, DataName);
+                }
+                else
+                {
+                    DataName = 'Data' + (this.id).substring(2)+'_H';
+                    var DataName2 = 'Data' + (this.id).substring(2) +'_L';
+                    SetConfig_TwoData('舒張壓', '收縮壓', '血壓', DataName, DataName2);
+                }
+                var ctx = document.getElementById(Canvas_ID).getContext("2d");
+                window.myLine = new Chart(ctx, config);
+            }
+            else
+            {
+                $("#" + Div_ID).hide();//Hide the Div
+                //Remove the Chart
+                $("#" + Div_Chart_ID).empty();
+            }
+                
+        });
+    });
+</script>

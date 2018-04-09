@@ -1,0 +1,179 @@
+﻿html,body 
+{
+    width:100%;height:100%;
+    margin:0px;
+    font-size:15px;
+    font-family:'微軟正黑體';
+    min-height:300px;
+    background-color:#F6F8F9;
+    min-width:300px;
+}
+* {
+    /*border:solid 1px black;*/
+}
+
+.Btn_LWidth 
+{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+}
+
+.Btn_NWidth {
+    display:inline;
+    position:absolute;
+    margin-top:10px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    cursor:pointer;
+    right:5px;
+}
+
+#Btn_Login {
+    background-color: #304F67;
+    color:rgba(255,255,255,0.8);
+}
+
+    #Btn_Login:hover {
+        cursor:pointer;
+        
+    }
+    
+    
+    
+    .content {
+        width: 100%;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+.Div_Login {
+    width: 350px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 100px;
+    border: solid 1px rgba(218,223,227,0.5);
+    border-radius: 5px;
+    background-color: rgba(235,235,235,0.2);
+    box-shadow: 3px 3px 10px rgba(50,50,50,0.3);
+}
+
+.Div_Img, canvas {
+    max-height:650px !important;
+    max-width:800px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#Div_Remarks, #Div_DayRecord {
+    background-color: rgba(155,203,203,0.2);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+div[name=Div_DefaultHide] 
+{
+    background-color:rgba(220,220,220,0.2);
+    height:35px;
+    line-height:35px;
+    margin-bottom:3px;
+}
+
+
+div[name=Div_Avg_DefaultHide] {
+    background-color: rgba(220,220,220,0.2);
+    min-height:40px;
+    line-height: 30px;
+    margin-bottom: 3px;
+}
+ 
+
+.Input_Login {
+    width: 100%;
+    height: 35px;
+    border: solid 1px rgba(218,223,227,0.5);
+    border-radius: 3px;
+    background-color: transparent;
+    padding-left: 5px;
+    color: rgba(48,79,103,0.9);
+}
+
+    .Input_Login:focus {
+        outline: none;
+        border: solid 1px rgba(48,79,103,0.9);
+    }
+    
+    
+    .TB_Login {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+  .TB_Login td {
+        padding:10px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+.P_LoginTitle
+{
+    font-size:25px;
+    font-weight:900;
+    color:rgba(255, 255, 255,0.8);
+}
+
+.P_LoginSmallTitle {
+    font-weight:800;
+    display: inline;
+    color: rgba(48,79,103,0.9);
+}
+
+.P_Title
+{
+    display:inline;
+padding-top:10px;
+font-size:20px;
+height:55px;
+line-height:55px;
+
+}
+
+.P_SmallTitle {
+    height: 30px;
+    line-height: 30px;
+    font-size:20px;
+   color:#668A94;
+   font-weight:900;
+}
+
+.P_Bolder {
+    display: inline;
+    font-weight: bolder;
+}
+
+.P_Normal {
+    display: inline;
+    color: #545454;
+}
+
+.P_Abnormal {
+    display:inline;
+    color: #BD2F40;
+}
+
+
+hr {
+    margin: 0px;
+    border: solid 1px rgba(20,20,20,0.9);
+}
+
+.hr_color 
+{
+    border: solid 1px rgba(230,230,230,0.6);
+}

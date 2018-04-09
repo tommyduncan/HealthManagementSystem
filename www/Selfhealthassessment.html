@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Education Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">自我健康評量</p>
+        <hr /><br/>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-sm-12"><input id="Btn_1" type="button" value="尼古丁成癮度量表" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment_nicotineaddictionmeasurementtable.html'"  /></div>
+                    <div class="form-group col-sm-12"><input id="Btn_2" type="button" value="健康飲食評估" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment_healthydietassessment.html'" /></div>
+                    <div class="form-group col-sm-12"><input id="Btn_3" type="button" value="壓力指數測量表" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment_pressureindexmeasurementtable.html'" /></div>
+                    <div class="form-group col-sm-12"><input id="Btn_4" type="button" value="簡式健康表(BSRS-5)" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment_simplehealthtable.html'" /></div>
+                    </div>
+            </form>
+        <p align="right"><font size="2"> 參考：臺北市政府衛生局-健康雲˙悠活台北 </font></p>
+</div>
+</body>
+</html>

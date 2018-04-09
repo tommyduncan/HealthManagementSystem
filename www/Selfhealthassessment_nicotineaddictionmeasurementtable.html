@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Education Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">尼古丁成癮度量表</p>
+        <hr /><br />
+        <form>
+            <div style="line-height:28px;font-size:15px;">
+                <ul>
+                    <li>說明：此量表可以幫助想戒菸或正在吸菸的您，更了解您的尼古丁成癮程度，進而選擇出適合自己的戒菸方法！</li>
+                </ul>
+            </div>
+        </form>
+            <div class="form-row" style="line-height:28px;">
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">評估項目</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">評分項目</td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">1.起床後多久抽第一支菸？</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form1" name="form1" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_1" value="3" id="nicotineaddictionratingprogram_1_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q79A238">5分鐘以內</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q79A238BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q79A238UcSS">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q79A238EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_1" value="2" id="nicotineaddictionratingprogram_1_1" />
+                                                    5～30分鐘
+                                                    <span id="ContentPlaceHolder1_ucQuestions1_Q79A238BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q79A238UcSS2">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q79A238EUcSS2">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_1" value="1" id="nicotineaddictionratingprogram_1_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q79A240">31～60分鐘</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q79A240BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q79A240UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q79A240EUcSS">分)</span>
+                                            </td>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_1" value="0" id="nicotineaddictionratingprogram_1_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q79A240">60分鐘以上</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q79A240BUcSS">(</span>0<span id="ContentPlaceHolder1_ucQuestions1_Q79A240EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">2.在禁菸區不能吸菸會難以忍受嗎？</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form2" name="form2" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_2" value="1" id="nicotineaddictionratingprogram_2_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q80A2">是</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q80A242BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q80A242UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q80A242EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_2" value="0" id="nicotineaddictionratingprogram_2_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q80A3">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q80A243BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q80A243UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q80A243EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">3.哪根菸最難放棄？</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form3" name="form3" method="post" action="">
+                                    <table width="160">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_3" value="1" id="nicotineaddictionratingprogram_3_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q81A2">早上第一支菸</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q81A244BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q81A244UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q81A244EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_3" value="0" id="nicotineaddictionratingprogram_3_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q81A3">其他</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q81A245BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q81A245UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q81A245EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">4.一天最多抽幾支菸？</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form4" name="form4" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_4" value="3" id="nicotineaddictionratingprogram_4_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q82A2">31支以上</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q82A246BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A246UcSS">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A246EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_4" value="2" id="nicotineaddictionratingprogram_4_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q82A3">21-30支</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q82A247BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A247UcSS">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A247EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_4" value="1" id="nicotineaddictionratingprogram_4_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q82A248">11-20支</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q82A248BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A248UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A248EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_4" value="0" id="nicotineaddictionratingprogram_4_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q82A4">10支或更少</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q82A249BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A249UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q82A249EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">5.起床後幾小時內是一天中抽最多菸的時候？</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form5" name="form5" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_5" value="1" id="nicotineaddictionratingprogram_5_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q83A2">是</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q83A250BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A250UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A250EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_5" value="0" id="nicotineaddictionratingprogram_5_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q83A3">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q83A251BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A251UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A251EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">6.當嚴重生病時，幾乎每天臥病在床還抽菸嗎？</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form6" name="form6" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_6" value="1" id="nicotineaddictionratingprogram_6_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q83A4">是</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q83A250BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A250UcSS2">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A250EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="nicotineaddictionmeasurementtable_radiovalue" type="radio" name="nicotineaddictionratingprogram_6" value="0" id="nicotineaddictionratingprogram_6_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q83A5">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q83A251BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A251UcSS2">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q83A251EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form7" name="form7" method="post" action="">
+                                    <label for="nicotineaddictionmeasurementtable_score">&nbsp;得分：</label>
+                                    <input type="text" name="nicotineaddictionmeasurementtable_score" id="nicotineaddictionmeasurementtable_score" style="font-size:15px"/>
+                                    <input type="button" value="計分" onClick="Getfraction()" />
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        <p>&nbsp;</p>
+        <table border="1" style="line-height:28px;">
+            <tbody>
+                <tr>
+                    <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">&nbsp;得分結果評量</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">&lt;4分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">尼古丁依賴度不高，下定決心，戒菸必能成功。</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">4~6分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">尼古丁依賴偏高，需要加油努力，戒除菸癮。</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">7~10分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">尼古丁依賴度非常高，需要專業人員來協助您戒菸。</td>
+                </tr>
+            </tbody>
+
+        </table>
+        
+        
+    <br />
+        <div class="form-group col-sm-12"><input id="Btn_Back" type="button" value="回上一頁" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment.html'" /></div>
+    <br />
+    </div>
+
+    <script>
+        function Getfraction() {
+            var TempTotal = 0;
+
+            $(".nicotineaddictionmeasurementtable_radiovalue").each(function () {
+                if (this.checked) {
+                    TempTotal += parseInt(this.value)
+                }
+            })
+            document.getElementById('nicotineaddictionmeasurementtable_score').value = TempTotal.toString().trim()
+        }
+
+    </script>
+</body>
+</html>

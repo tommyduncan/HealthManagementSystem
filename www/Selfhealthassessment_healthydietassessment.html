@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Education Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">健康飲食評估</p>
+        <hr /><br />
+        <form>
+            <div style="line-height:28px;font-size:15px;">
+                <ul>
+                    <li>說明：健康飲食評估
+                        </li>
+                </ul>
+            </div>
+        </form>
+            <div class="form-row" style="line-height:28px;" id="sums">
+                <table border="1" >
+                    <tbody>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">評估項目</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">評分項目</td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">1.我經常每餐只吃到約7~8分飽</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form1" name="form1" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue"type="radio" name="healthydietassessment_1" value="1" id="healthydietassessment_1_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_1" value="0" id="healthydietassessment_1_1" />
+                                                    否
+                                                    <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">2.我經常吃五穀米、糙米、雜糧麵包等天然食物</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form2" name="form2" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_2" value="1" id="healthydietassessment_2_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS2">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS2">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_2" value="0" id="healthydietassessment_2_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS2">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS2">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">3.我經常吃豆腐之類的黃豆食品或豆類料理</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form3" name="form3" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_3" value="1" id="healthydietassessment_3_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS3">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS3">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_3" value="0" id="healthydietassessment_3_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS3">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS3">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">4.我用餐時很少加調味料</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form4" name="form4" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_4" value="1" id="healthydietassessment_4_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS4">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS4">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_4" value="0" id="healthydietassessment_4_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS4">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS4">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">5.我很少吃加工食品( 如火腿、貢丸、罐頭等)</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form5" name="form5" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_5" value="1" id="healthydietassessment_5_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS5">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS5">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_5" value="0" id="healthydietassessment_5_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS5">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS5">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">6.我很少吃油炸食物</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form8" name="form8" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_6" value="1" id="healthydietassessment_6_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS6">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS6">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_6" value="0" id="healthydietassessment_6_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS6">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS6">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">7.我經常每天吃到四碟蔬菜</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form6" name="form6" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_7" value="1" id="healthydietassessment_7_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS7">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS7">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS7">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_7" value="0" id="healthydietassessment_7_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS7">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS7">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS7">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">8.我很少吃泡麵</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form9" name="form9" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_8" value="1" id="healthydietassessment_8_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS8">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS8">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS8">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_8" value="0" id="healthydietassessment_8_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS8">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS8">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS8">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">9.我很少吃零食、蛋糕等食品</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form10" name="form10" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_9" value="1" id="healthydietassessment_9_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS9">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS9">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS9">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_9" value="0" id="healthydietassessment_9_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS9">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS9">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS9">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">10.我經常每天都吃四份水果</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form11" name="form11" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_10" value="1" id="healthydietassessment_10_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239BUcSS10">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239UcSS10">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1239EUcSS10">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="healthydietassessment_radiovalue" type="radio" name="healthydietassessment_10" value="0" id="healthydietassessment_10_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238BUcSS10">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238UcSS10">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q1079A1238EUcSS10">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form7" name="form7" method="post" action="">
+                                    <label for="healthydietassessment_score">&nbsp;得分：</label>
+                                    <input type="text" name="healthydietassessment_score" id="healthydietassessment_score"  style="font-size:15px"/>
+                                    <input type="button" value="計分" onClick="Getfraction()"/>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+
+
+                <p>&nbsp;</p>
+                <table border="1" style="line-height:28px;">
+                    <tbody>
+                        <tr>
+                            <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">&nbsp;得分結果評量</td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">0~5分</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">您的飲食習慣要儘快改善喔！否則容易引起嚴重的併發症。</td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">6~9分</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">您的飲食習慣需要再調整一下，血壓控制會更好！</td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">10分</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">您的飲食習慣相當健康，要繼續保持唷！</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        
+    <br />
+        <div class="form-group col-sm-12"><input id="Btn_Back" type="button" value="回上一頁" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment.html'" /></div>
+    <br />
+    </div>
+    
+    <script>
+        function Getfraction() {
+            var TempTotal = 0;
+
+            $(".healthydietassessment_radiovalue").each(function () {
+                if (this.checked) {
+                    TempTotal += parseInt(this.value)
+                }
+            })
+            document.getElementById('healthydietassessment_score').value = TempTotal.toString().trim()
+        }
+
+    </script>
+
+</body>
+</html>

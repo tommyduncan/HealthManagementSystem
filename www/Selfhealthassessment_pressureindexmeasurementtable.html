@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Education Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">壓力指數測量表</p>
+        <hr /><br />
+        <form>
+            <div style="line-height:28px;font-size:15px;">
+                <ul>
+                    <li>說明：預防勝於治療，職場心理健康促進計劃的第一步就是了解現況。因此，可利用本表進行壓力評估，評估每位員工的壓力狀況，作為擬訂壓力管理計畫之參考依據。 </li>
+                </ul>
+            </div>
+        </form>
+            <div class="form-row" style="line-height:28px;">
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF"><strong>評估項目</strong></td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF"><strong>評分項目</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">1.您最近是否經常感到緊張，覺得工作總是做不完？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form1" name="form1" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_1" value="1" id="pressureindexmeasurementtable_1_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q61A184">是</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_1" value="0" id="pressureindexmeasurementtable_1_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q61A185">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">2.您最近是否老是睡不好，常常失眠或睡眠品質不佳？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form2" name="form2" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_2" value="1" id="pressureindexmeasurementtable_2_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS2">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS2">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_2" value="0" id="pressureindexmeasurementtable_2_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q61A185">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS2">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">3.您最近是否經常有情緒低落、焦慮、煩躁的情況？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form3" name="form3" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_3" value="1" id="pressureindexmeasurementtable_3_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS3">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS3">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_3" value="0" id="pressureindexmeasurementtable_3_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q61A185">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS3">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS3">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">4.您最近是否經常忘東忘西、變得很健忘？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form4" name="form4" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_4" value="1" id="pressureindexmeasurementtable_4_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS4">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS4">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_4" value="0" id="pressureindexmeasurementtable_4_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q61A185">否</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS4">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS4">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">5.您最近是否經常覺得胃口不好？或胃口特別好？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form5" name="form5" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_5" value="1" id="pressureindexmeasurementtable_5_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS5">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS5">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_5" value="0" id="pressureindexmeasurementtable_5_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS5">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS5">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">6.您最近六個月內是否生病不只一次了？</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form8" name="form8" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_6" value="1" id="pressureindexmeasurementtable_6_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS6">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS6">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_6" value="0" id="pressureindexmeasurementtable_6_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS6">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS6">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">7.您最近是否經常覺得很累，假日都在睡覺？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form6" name="form6" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_7" value="1" id="pressureindexmeasurementtable_7_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS7">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS7">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS7">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_7" value="0" id="pressureindexmeasurementtable_7_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS7">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS7">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS7">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">8.您最近是否經常覺得頭痛、腰痠背痛？</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form9" name="form9" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_8" value="1" id="pressureindexmeasurementtable_8_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS8">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS8">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS8">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_8" value="0" id="pressureindexmeasurementtable_8_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS8">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS8">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS8">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">9.您最近是否經常意見和別人不同？</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form10" name="form10" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_9" value="1" id="pressureindexmeasurementtable_9_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS9">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS9">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS9">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_9" value="0" id="pressureindexmeasurementtable_9_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS9">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS9">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS9">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">10.您最近是否注意力經常難以集中？</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form11" name="form11" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_10" value="1" id="pressureindexmeasurementtable_10_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS10">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS10">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS10">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_10" value="0" id="pressureindexmeasurementtable_10_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS10">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS10">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS10">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">11.您最近是否經常覺得未來充滿不確定感？恐懼感？</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form12" name="form12" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_11" value="1" id="pressureindexmeasurementtable_11_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS11">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS11">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS11">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_11" value="0" id="pressureindexmeasurementtable_11_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS11">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS11">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS11">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">12.有人說您最近氣色不太好嗎？</td>
+                            <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form13" name="form13" method="post" action="">
+                                    <table width="100">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_12" value="1" id="pressureindexmeasurementtable_12_0" />
+                                                    是 <span id="ContentPlaceHolder1_ucQuestions1_Q61A184BUcSS12">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184UcSS12">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A184EUcSS12">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="pressureindexmeasurementtable_radiovalue" type="radio" name="pressureindexmeasurementtable_12" value="0" id="pressureindexmeasurementtable_12_1" />
+                                                    否 <span id="ContentPlaceHolder1_ucQuestions1_Q61A185BUcSS12">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185UcSS12">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q61A185EUcSS12">分)</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form7" name="form7" method="post" action="">
+                                    <label for="pressureindexmeasurementtable_score">&nbsp;得分：</label>
+                                    <input type="text" name="pressureindexmeasurementtable_score" id="pressureindexmeasurementtable_score" style="font-size:15px" />
+                                    <input type="button" value="計分" onClick="Getfraction()" />
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        <p>&nbsp;</p>
+        <table border="1" style="line-height:28px;">
+            <tbody>
+                <tr>
+                    <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">&nbsp;得分結果評量</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">&lt; 4分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">壓力指數還在能負荷的範圍。</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">4~5分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">壓力蠻困擾您，雖能勉強應付，但必需認真學習壓力管理了，同時多與良師益友聊一聊。</td>
+                </tr>
+                <tr>
+                    <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">6~8分</td>
+                    <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">您的壓力很大，趕快去看心理衛生專業人員，接受系統性的心理治療。</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">&gt; 9分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">您的壓力已很嚴重，應該看精神專科醫師，依醫師處方用藥物治療與心理治療，幫忙您的生活趕快恢復正常軌道。</td>
+                </tr>
+            </tbody>
+
+        </table>
+        
+    <br />
+        <div class="form-group col-sm-12"><input id="Btn_Back" type="button" value="回上一頁" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment.html'" /></div>
+    <br />
+    </div>
+
+    <script>
+        function Getfraction() {
+            var TempTotal = 0;
+
+            $(".pressureindexmeasurementtable_radiovalue").each(function () {
+                if (this.checked) {
+                    TempTotal += parseInt(this.value)
+                }
+            })
+            document.getElementById('pressureindexmeasurementtable_score').value = TempTotal.toString().trim()
+        }
+
+    </script>
+</body>
+</html>

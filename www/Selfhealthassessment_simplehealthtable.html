@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Education Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Basic.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
+                <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
+                <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
+                <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
+            </div>
+        </div>
+        <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+    </nav>
+    <div class="content">
+        <p class="P_Title">簡式健康表(BSRS-5) </p>
+        <hr /><br />
+        <form>
+            <div style="line-height:28px;font-size:15px;">
+                <ul>
+                    <li>說明：本量表所列舉的問題是為協助您瞭解您的身心適應狀況，請您仔細回想在最近一星期中(包括今天)，這些問題使您感到困擾或苦惱的程度，然後圈選一個您認為最能代表您感覺的答案。 </li>
+                </ul>
+            </div>
+        </form>
+            <div class="form-row">
+                <table border="1" style="line-height:28px;">
+                    <tbody>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">評估項目</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">評分項目</td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">1.睡眠困難,譬如難以入睡、易醒或早醒</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form1" name="form1" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_1" value="0" id="simplehealthtable_1_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A208">完全沒有</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A208BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208UcSS">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_1" value="1" id="simplehealthtable_1_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A209">輕微</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A209BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209UcSS">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_1" value="2" id="simplehealthtable_1_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A210">中等程度</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A210BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210UcSS">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_1" value="3" id="simplehealthtable_1_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A211">厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A211BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211UcSS">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_1" value="4" id="simplehealthtable_1_4" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A212">非常厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A212BUcSS">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212UcSS">4</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212EUcSS">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">2.感覺緊張不安</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form2" name="form2" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_2" value="0" id="simplehealthtable_2_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A208">完全沒有</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A208BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208UcSS2">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_2" value="1" id="simplehealthtable_2_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A209">輕微</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A209BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209UcSS2">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_2" value="2" id="simplehealthtable_2_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A210">中等程度</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A210BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210UcSS2">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_2" value="3" id="simplehealthtable_2_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A211">厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A211BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211UcSS2">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_2" value="4" id="simplehealthtable_2_4" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A212">非常厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A212BUcSS2">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212UcSS2">4</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212EUcSS2">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">3.覺得容易苦惱或動怒</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form3" name="form3" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_3" value="1" id="simplehealthtable_3_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A208">完全沒有</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A208BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208UcSS3">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208EUcSS3">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_3" value="1" id="simplehealthtable_3_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A209">輕微</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A209BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209UcSS3">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209EUcSS3">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_3" value="2" id="simplehealthtable_3_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A210">中等程度</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A210BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210UcSS3">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210EUcSS3">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_3" value="3" id="simplehealthtable_3_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A211">厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A211BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211UcSS3">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211EUcSS3">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_3" value="4" id="simplehealthtable_3_4" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A212">非常厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A212BUcSS3">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212UcSS3">4</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212EUcSS3">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">4.感覺憂鬱、心情低落</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form4" name="form4" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_4" value="0" id="simplehealthtable_4_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A208">完全沒有</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A208BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208UcSS4">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208EUcSS4">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_4" value="1" id="simplehealthtable_4_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A209">輕微</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A209BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209UcSS4">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209EUcSS4">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_4" value="2" id="simplehealthtable_4_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A210">中等程度</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A210BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210UcSS4">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210EUcSS4">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_4" value="3" id="simplehealthtable_4_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A211">厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A211BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211UcSS4">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211EUcSS4">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_4" value="4" id="simplehealthtable_4_4" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A212">非常厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A212BUcSS4">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212UcSS4">4</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212EUcSS4">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">5.覺得比不上別人</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form5" name="form5" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_5" value="0" id="simplehealthtable_5_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A208">完全沒有</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A208BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208UcSS5">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208EUcSS5">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_5" value="1" id="simplehealthtable_5_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A209">輕微</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A209BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209UcSS5">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209EUcSS5">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_5" value="2" id="simplehealthtable_5_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A210">中等程度</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A210BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210UcSS5">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210EUcSS5">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_5" value="3" id="simplehealthtable_5_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A211">厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A211BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211UcSS5">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211EUcSS5">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_5" value="4" id="simplehealthtable_5_4" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A212">非常厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A212BUcSS5">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212UcSS5">4</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212EUcSS5">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">6.有自殺的想法</td>
+                            <td width="250" height="80" align="center" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form6" name="form6" method="post" action="">
+                                    <table width="150">
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_6" value="0" id="simplehealthtable_6_0" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A208">完全沒有</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A208BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208UcSS6">0</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A208EUcSS6">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_6" value="1" id="simplehealthtable_6_1" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A209">輕微</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A209BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209UcSS6">1</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A209EUcSS6">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_6" value="2" id="simplehealthtable_6_2" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A210">中等程度</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A210BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210UcSS6">2</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A210EUcSS6">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_6" value="3" id="simplehealthtable_6_3" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A211">厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A211BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211UcSS6">3</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A211EUcSS6">分)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input class="simplehealthtable_radiovalue" type="radio" name="simplehealthtable_6" value="4" id="simplehealthtable_6_4" />
+                                                </label>
+                                                <label for="ContentPlaceHolder1_ucQuestions1_Q73A212">非常厲害</label>
+                                                <span id="ContentPlaceHolder1_ucQuestions1_Q73A212BUcSS6">(</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212UcSS6">4</span><span id="ContentPlaceHolder1_ucQuestions1_Q73A212EUcSS6">分)</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">
+                                <form id="form7" name="form7" method="post" action="">
+                                    <label for="simplehealthtable_score">&nbsp;得分：</label>
+                                    <input type="text" name="simplehealthtable_score" id="simplehealthtable_score" style="font-size:15px"/>
+                                    <input type="button" value="計分" onClick="Getfraction()" />
+                                 </form>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        <p>&nbsp;</p>
+        <table border="1" style="line-height:28px;">
+            <tbody>
+                <tr>
+                    <td height="80" colspan="2" align="left" valign="middle" bgcolor="#FFFFFF">&nbsp;得分結果評量</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">0~5分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">身心適應狀況良好。</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">6~9分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">輕度情緒困擾，建議找家人或朋友談談，抒發情緒。</td>
+                </tr>
+                <tr>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">10~14分</td>
+                    <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">中度情緒困擾，建議尋求心理諮商或接受專業諮詢。</td>
+                </tr>
+                <tr>
+                    <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">&gt;15分</td>
+                    <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">重度情緒困擾，需高度關懷，建議尋求專業輔導或精神科治療。</td>
+                </tr>
+                <tr>
+                    <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">有自殺的想法</td>
+                    <td height="80" align="center" valign="middle" bgcolor="#FFFFFF">若此題評量結果為「中等程度」以上，建議立即尋求專業輔導或精神科治療。</td>
+                </tr>
+            </tbody>
+
+        </table>
+        
+    <br />
+        <div class="form-group col-sm-12"><input id="Btn_Back" type="button" value="回上一頁" class="Btn_LWidth" onclick="javascript: location.href = 'Selfhealthassessment.html'" /></div>
+    <br />
+    </div>
+
+    <script>
+        function Getfraction() {
+            var TempTotal = 0;
+
+            $(".simplehealthtable_radiovalue").each(function () {
+                if (this.checked) {
+                    TempTotal += parseInt(this.value)
+                }
+            })
+            document.getElementById('simplehealthtable_score').value = TempTotal.toString().trim()
+        }
+
+    </script>
+</body>
+</html>
