@@ -6,9 +6,16 @@
     <title>Current Information</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/Basic.css" rel="stylesheet" />
-    <script src="scripts/jquery-3.2.1.min.js"></script>
-    <script src="scripts/tether.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <script src="scripts/lib/jquery-3.2.1.min.js"></script>
+    <script src="scripts/lib/tether.min.js"></script>
+    <script src="scripts/lib/bootstrap.min.js"></script>
+    <script src="scripts/lib/moment.min.js"></script>
+    <script src="scripts/lib/jquery-ui.js"></script>
+    <script src="scripts/lib/async.min.js"></script>
+    <script src="scripts/lib/loadingoverlay.min.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/CurrentInformation.js"></script>
 </head>
 <body>
         <nav  class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -24,7 +31,7 @@
                     <a class="nav-item nav-link" href="QAInformation.html">Q&A</a>
                 </div>
             </div>
-            <button class="btn btn-dark btn-lg" type="button" onclick="javascript:location.href='LoginPage.html'">登出</button>
+            <button class="btn btn-dark btn-lg" id="logout_btn" type="button">登出</button>
         </nav>
     <div class="content">
         <p class="P_Title">目前資訊</p>
@@ -57,40 +64,40 @@
         <div id="Div_DisplayBlock">
         <form>
             <div class="form-row" id="Div_Weight" name="Div_DefaultHide">
-                <div class="form-group col-8">體重</div><div class="form-group col-2">80</div><div class="form-group col-2">KG</div>
+                <div class="form-group col-8">體重</div><div class="form-group col-2"><p id="weight"></p></div><div class="form-group col-2">KG</div>
             </div>
             <div class="form-row" id="Div_BloodPressure" name="Div_DefaultHide">
-                <div class="form-group col-7">血壓&nbsp;&nbsp;(收縮壓/舒張壓)</div><div class="form-group col-3"><p class="P_Abnormal">132</p>&nbsp; /&nbsp;75</div><div class="form-group col-2">mmHg</div>
+                <div class="form-group col-7">血壓&nbsp;&nbsp;(收縮壓/舒張壓)</div><div class="form-group col-3"><span id="systolicBloodPressure"></span>&nbsp; / &nbsp;<span id="diastolicBloodPressure"></span></div><div class="form-group col-2">mmHg</div>
             </div>
             <div class="form-row" id="Div_WC" name="Div_DefaultHide">
-                <div class="form-group col-8">腰圍</div><div class="form-group col-2"><p class="P_Abnormal"> 95</p></div><div class="form-group col-2">cm</div>
+                <div class="form-group col-8">腰圍</div><div class="form-group col-2"><p id="waist"></p></div><div class="form-group col-2">cm</div>
             </div>
             <div class="form-row" id="Div_GH" name="Div_DefaultHide">
-                <div class="form-group col-8">糖化血色素</div><div class="form-group col-2"><p class="P_Abnormal">7.0</p></div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">糖化血色素</div><div class="form-group col-2"><p id="HbA1C"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
             <div class="form-row" id="Div_FBS" name="Div_DefaultHide">
-                <div class="form-group col-8">空腹血糖</div><div class="form-group col-2"><p class="P_Abnormal">117</p></div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">空腹血糖</div><div class="form-group col-2"><p id="ACSugar"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
             <div class="form-row" id="Div_UN" name="Div_DefaultHide">
-                <div class="form-group col-8">尿素氮</div><div class="form-group col-2">8</div><div class="form-group col-2">mg/gm</div>
+                <div class="form-group col-8">尿素氮</div><div class="form-group col-2"><p id="BUN"></p></div><div class="form-group col-2">mg/gm</div>
             </div>
             <div class="form-row" id="Div_Creatinine" name="Div_DefaultHide">
-                <div class="form-group col-8">肌酸酐</div><div class="form-group col-2">1</div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">肌酸酐</div><div class="form-group col-2"><p id="creatinine"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
             <div class="form-row" id="Div_GFR" name="Div_DefaultHide">
-                <div class="form-group col-8">腎絲球過濾率</div><div class="form-group col-2">85</div><div class="form-group col-2">MDRD</div>
+                <div class="form-group col-8">腎絲球過濾率</div><div class="form-group col-2"><p id="eGFR"></p></div><div class="form-group col-2">MDRD</div>
             </div>
             <div class="form-row" id="Div_Cholesterol" name="Div_DefaultHide">
-                <div class="form-group col-8">總膽固醇</div><div class="form-group col-2">180</div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">總膽固醇</div><div class="form-group col-2"><p id="TCH"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
             <div class="form-row" id="Div_TG" name="Div_DefaultHide">
-                <div class="form-group col-8">三酸甘油脂</div><div class="form-group col-2"><p class="P_Abnormal">180</p></div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">三酸甘油脂</div><div class="form-group col-2"><p id="TG"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
             <div class="form-row" id="Div_LDL" name="Div_DefaultHide">
-                <div class="form-group col-8">低密度脂蛋白</div><div class="form-group col-2"><p class="P_Abnormal">160</p></div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">低密度脂蛋白</div><div class="form-group col-2"><p id="LDL"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
             <div class="form-row" id="Div_Proteinuria" name="Div_DefaultHide">
-                <div class="form-group col-8">蛋白尿</div><div class="form-group col-2"><p class="P_Abnormal">150</p></div><div class="form-group col-2">mg/dl</div>
+                <div class="form-group col-8">蛋白尿</div><div class="form-group col-2"><p id="UACR"></p></div><div class="form-group col-2">mg/dl</div>
             </div>
         </form>
         </div><br/>
@@ -98,9 +105,9 @@
             <p class="P_SmallTitle">備註</p>
             <form>
                 <div class="form-group row">
-                    <label for="example-date-input" class="col-4 col-form-label">選取日期</label>
+                    <label for="date-input" class="col-4 col-form-label">選取日期</label>
                     <div class="col-8">
-                        <input class="form-control" type="date" value="2017-11-29" id="example-date-input">
+                        <input class="form-control" type="text" id="date-input">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -108,25 +115,25 @@
                     <div class="col-8">
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="RBTN_Sport" id="inlineRadio1" value="Yes"> 是
+                                <input class="form-check-input" type="radio" name="RBTN_Sport" id="inlineRadio1" value="Y"> 是
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="RBTN_Sport" id="inlineRadio2" value="No" checked="checked"> 否
+                                <input class="form-check-input" type="radio" name="RBTN_Sport" id="inlineRadio2" value="N" checked="checked"> 否
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="form-group row" id="Div_SportTime">
+                <div class="form-group row" id="Div_SportTime" style="display: none;">
                     <label class="col-4 col-form-label">運動多久</label>
                     <div class="col-8">
-                        <select class="form-control" id="exampleSelect1">
-                            <option>30 分鐘</option>
-                            <option>1.5 小時</option>
-                            <option>2 小時</option>
-                            <option>2.5 小時</option>
-                            <option>3 小時</option>
+                        <select class="form-control" id="sportTime">
+                            <option value="1">30 分鐘</option>
+                            <option value="2">1 小時</option>
+                            <option value="3">1.5 小時</option>
+                            <option value="4">2 小時</option>
+                            <option value="5">2.5 小時</option>
                         </select>
                     </div>
                 </div>
@@ -153,38 +160,3 @@
 </div>
 </body>
 </html>
-<script type="text/javascript">
-    var selectedVal = "";
-    var selected = $("#radioDiv input[type='radio']:checked");
-    if (selected.length > 0) {
-        selectedVal = selected.val();
-    }
-
-    $(document).ready(function () {
-        //Default
-        $("#Div_SportTime").hide();
-        $('div[name=Div_DefaultHide]').hide(); //Hide all div(name=DivDefaulHide)
-        $('input[type=checkbox]').prop("checked", false);
-
-        //Checkbox Check Change Event
-        $('input[type=checkbox]').change(function () {
-            var Div_ID = 'Div' + (this.id).substring(2); //Get ID
-            if (this.checked) 
-                $("#" + Div_ID).show(); //Display the Div
-            else
-                $("#" + Div_ID).hide();//Hide the Div
-        });
-
-
-        //Div_DefaultHide
-
-        $('input[type=radio][name=RBTN_Sport]').change(function () {
-            if (this.value == 'Yes') {
-                $("#Div_SportTime").show();
-            }
-            else if (this.value == 'No') {
-                $("#Div_SportTime").hide();
-            }
-        });
-    });
-</script>
