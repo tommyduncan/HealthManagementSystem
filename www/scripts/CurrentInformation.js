@@ -95,7 +95,7 @@ $(function () {
     function getInspectionData(token, callback) {
         $.ajax({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/inspectionData',
+            url: webService.url + 'inspectionData',
             headers: {
                 Authorization: token
             }
@@ -124,7 +124,7 @@ $(function () {
     function getSportRecord(token, dateString, callback) {
         $.ajax({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/appInfo/' + dateString,
+            url: webService.url + 'appInfo/' + dateString,
             headers: {
                 Authorization: token
             }
@@ -194,7 +194,7 @@ $(function () {
 
         $.ajax({
             method: method,
-            url: 'http://127.0.0.1:3000/appInfo/',
+            url: webService.url + 'appInfo/',
             headers: {
                 'Authorization': token,
                 'Content-Type': 'application/json'
