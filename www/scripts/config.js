@@ -1,6 +1,6 @@
 $(function () {
     webService = {
-        url: 'http://linux-tommy.csie.io:3000/'
+        url: 'http://140.131.95.55:55/'
     };
     app = {
         secret: 'HealthCare'

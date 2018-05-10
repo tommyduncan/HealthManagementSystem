@@ -69,13 +69,18 @@ $(function () {
                 async.apply(getInspectionData, token),
                 async.apply(getSportRecord, token, moment(new Date()).format('YYYYMMDD'))
             ], function (err, result) {
+                console.log(result);
                 if (err)
                     alert('系統錯誤，請聯絡系統管理員！');
                 else {
-                    var gender = result[0].Gender;
-                    var kidneyFailureStage = result[1].stage;
+                    if (!result[0])
+                        alert('系統錯誤，請聯絡系統管理員！');
+                    else {
+                        var gender = result[0].Gender;
+                        var kidneyFailureStage = result[1].stage;
 
-                    checkData(gender, kidneyFailureStage);
+                        checkData(gender, kidneyFailureStage);
+                    }
                 }
 
                 $.LoadingOverlay("hide");
