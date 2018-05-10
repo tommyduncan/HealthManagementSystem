@@ -64,12 +64,6 @@ $(function () {
                 }
             });
 
-            $('#logout_btn').click(function () {
-                sessionStorage.removeItem('token');
-
-                location.href = './LoginPage.html';
-            });
-
             async.parallel([
                 async.apply(getUserData, token),
                 async.apply(getInspectionData, token),
@@ -86,8 +80,6 @@ $(function () {
 
                 $.LoadingOverlay("hide");
             });
-        } else {
-            location.href = './LoginPage.html';
         }
     }
 

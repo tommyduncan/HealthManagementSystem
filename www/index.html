@@ -6,16 +6,20 @@
     <title>Login</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/Basic.css" rel="stylesheet" />
-    <script src="scripts/jquery-3.2.1.min.js"></script>
-    <script src="scripts/tether.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/lib/jquery-3.2.1.min.js"></script>
+    <script src="scripts/lib/tether.min.js"></script>
+    <script src="scripts/lib/bootstrap.min.js"></script>
+    <script src="scripts/lib/crypto-js/crypto-js.min.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/LoginPage.js"></script>
+    <script src="cordova.js"></script>
     <style>
         body {
-            background-color: #424253;
+            background-color: #424253; 
             background: linear-gradient(to bottom right, #4F7987, #ABC9B9);
         }
     </style>
-
+   
 </head>
 <body>
     <div class="Div_Login">
@@ -27,16 +31,16 @@
                 <td><p class="P_LoginSmallTitle">代謝症候群 Metabolic Syndrome</p></td>
             </tr>
             <tr>
-                <td align="center"><input id="TB_ID" type="text" class="Input_Login" placeholder="帳號" /></td>
+                <td align="center"><input id="TB_ID" type="text"  class="Input_Login" placeholder="帳號"/></td>
             </tr>
             <tr>
-                <td align="center"><input id="TB_PW" type="password" class="Input_Login" placeholder="密碼" /></td>
+                <td align="center"><input id="TB_PW" type="password" class="Input_Login" placeholder="密碼"/></td>
             </tr>
             <tr>
                 <td align="left"><input id="CB_RememberPW" type="checkbox" /><p class="P_LoginSmallTitle">&nbsp;&nbsp;記住密碼</p></td>
             </tr>
             <tr>
-                <td align="center"><input id="Btn_Login" type="button" value="登入" onclick="javascript:location.href='CurrentInformation.html'" class="Btn_LWidth" /></td>
+                <td align="center"><input id="Btn_Login" type="button" value="登入" class="Btn_LWidth"/></td>
             </tr>
             <tr>
                 <td><p class="P_LoginSmallTitle">©Untitled&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  新光吳火獅紀念醫院</p></td>

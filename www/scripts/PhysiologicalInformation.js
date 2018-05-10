@@ -1,4 +1,5 @@
 $(function () {
+    var config = null;
     var dateColumn = [];
     var dataset = {};
 
@@ -53,19 +54,13 @@ $(function () {
                         SetConfig_TwoData('舒張壓', '收縮壓', '血壓', DataName, DataName2);
                     }
                     var ctx = document.getElementById(Canvas_ID).getContext("2d");
-                    window.myLine = new Chart(ctx, config);
+                    var myChart = new Chart(ctx, config);
                 }
                 else {
                     $("#" + Div_ID).hide();//Hide the Div
                     //Remove the Chart
                     $("#" + Div_Chart_ID).empty();
                 }
-            });
-
-            $('#logout_btn').click(function () {
-                sessionStorage.removeItem('token');
-
-                location.href = './LoginPage.html';
             });
 
             var dateRange = $('input[name="daterange"]').val();
@@ -79,8 +74,6 @@ $(function () {
 
                 $.LoadingOverlay("hide");
             });
-        } else {
-            location.href = './LoginPage.html';
         }
     }
 
