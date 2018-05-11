@@ -237,6 +237,9 @@ $(function () {
         /* 肌酸酐 */
         if (parseFloat($('#creatinine').text()) < 0.5 || parseFloat($('#creatinine').text()) > 1.3)
             $('#creatinine').addClass('P_Abnormal');
+        /* 腎絲球過濾率 */
+        if (parseInt($('#eGFR').text()) < 100)
+            $('#eGFR').addClass('P_Abnormal');
         /* 總膽固醇 */
         if (parseInt($('#TCH').text()) < 110 || parseInt($('#TCH').text()) > 200)
             $('#TCH').addClass('P_Abnormal');
@@ -249,36 +252,5 @@ $(function () {
         /* 蛋白尿 */
         if (parseInt($('#UACR').text()) < 150)
             $('#UACR').addClass('P_Abnormal');
-        /* 腎絲球過濾率 */
-        switch (kidneyFailureStage) {
-            case 'Stage1':
-                if (parseInt($('#eGFR').text()) >= 90)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-            case 'Stage2':
-                if (parseInt($('#eGFR').text()) > 89 || parseInt($('#eGFR').text()) < 60)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-            case 'Stage3':
-                if (parseInt($('#eGFR').text()) > 59 || parseInt($('#eGFR').text()) < 30)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-            case 'Stage3a':
-                if (parseInt($('#eGFR').text()) > 59 || parseInt($('#eGFR').text()) < 45)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-            case 'Stage3b':
-                if (parseInt($('#eGFR').text()) > 44 || parseInt($('#eGFR').text()) < 30)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-            case 'Stage4':
-                if (parseInt($('#eGFR').text()) > 29 || parseInt($('#eGFR').text()) < 15)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-            case 'Stage5':
-                if (parseInt($('#eGFR').text()) < 15)
-                    $('#eGFR').addClass('P_Abnormal');
-                break;
-        }
     }
 });
