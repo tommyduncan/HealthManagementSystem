@@ -226,16 +226,16 @@ $(function () {
                 $('#waist').addClass('P_Abnormal');
         }
         /* 糖化血色素 */
-        if (parseFloat($('#HbA1C').text()) >= 6.5)
+        if (parseFloat($('#HbA1C').text()) < 4 || parseFloat($('#HbA1C').text()) > 6)
             $('#HbA1C').addClass('P_Abnormal');
         /* 空腹血糖 */
-        if (parseInt($('#ACSugar').text()) >= 100)
+        if (parseInt($('#ACSugar').text()) < 70 || parseInt($('#ACSugar').text()) > 110)
             $('#ACSugar').addClass('P_Abnormal');
         /* 尿素氮 */
-        if (parseInt($('#BUN').text()) < 8 || parseInt($('#BUN').text()) > 23)
+        if (parseInt($('#BUN').text()) < 7 || parseInt($('#BUN').text()) > 25)
             $('#BUN').addClass('P_Abnormal');
         /* 肌酸酐 */
-        if (parseFloat($('#creatinine').text()) < 0.6 || parseFloat($('#creatinine').text()) > 1.4)
+        if (parseFloat($('#creatinine').text()) < 0.5 || parseFloat($('#creatinine').text()) > 1.3)
             $('#creatinine').addClass('P_Abnormal');
         /* 總膽固醇 */
         if (parseInt($('#TCH').text()) < 110 || parseInt($('#TCH').text()) > 200)
@@ -244,7 +244,7 @@ $(function () {
         if (parseInt($('#TG').text()) >= 150)
             $('#TG').addClass('P_Abnormal');
         /* 低密度脂蛋白 */
-        if (parseInt($('#LDL').text()) < 100)
+        if (parseInt($('#LDL').text()) < 0 || parseInt($('#LDL').text()) > 130)
             $('#LDL').addClass('P_Abnormal');
         /* 蛋白尿 */
         if (parseInt($('#UACR').text()) < 150)
