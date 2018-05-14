@@ -1,7 +1,21 @@
 $(function () {
     var config = null;
     var dateColumn = [];
-    var dataset = {};
+    var dataset = {
+        Data_Weight: {},
+        Data_BloodPressure_L: {},
+        Data_BloodPressure_H: {},
+        Data_WC: {},
+        Data_GH: {},
+        Data_FBS: {},
+        Data_UN: {},
+        Data_Creatinine: {},
+        Data_GFR: {},
+        Data_Cholesterol: {},
+        Data_TG: {},
+        Data_LDL: {},
+        Data_Proteinuria: {}
+    };
 
     initialize();
 
@@ -107,19 +121,19 @@ $(function () {
     /* 處理 dataset 陣列 */
     function processDataset(inspectionDataList) {
         /* 初始化 dataset 陣列 */
-        dataset['Data_Weight'] = new Array(dateColumn.length);
-        dataset['Data_BloodPressure_L'] = new Array(dateColumn.length);
-        dataset['Data_BloodPressure_H'] = new Array(dateColumn.length);
-        dataset['Data_WC'] = new Array(dateColumn.length);
-        dataset['Data_GH'] = new Array(dateColumn.length);
-        dataset['Data_FBS'] = new Array(dateColumn.length);
-        dataset['Data_UN'] = new Array(dateColumn.length);
-        dataset['Data_Creatinine'] = new Array(dateColumn.length);
-        dataset['Data_GFR'] = new Array(dateColumn.length);
-        dataset['Data_Cholesterol'] = new Array(dateColumn.length);
-        dataset['Data_TG'] = new Array(dateColumn.length);
-        dataset['Data_LDL'] = new Array(dateColumn.length);
-        dataset['Data_Proteinuria'] = new Array(dateColumn.length);
+        dataset.Data_Weight.values = new Array(dateColumn.length);
+        dataset.Data_BloodPressure_L.values = new Array(dateColumn.length);
+        dataset.Data_BloodPressure_H.values = new Array(dateColumn.length);
+        dataset.Data_WC.values = new Array(dateColumn.length);
+        dataset.Data_GH.values = new Array(dateColumn.length);
+        dataset.Data_FBS.values = new Array(dateColumn.length);
+        dataset.Data_UN.values = new Array(dateColumn.length);
+        dataset.Data_Creatinine.values = new Array(dateColumn.length);
+        dataset.Data_GFR.values = new Array(dateColumn.length);
+        dataset.Data_Cholesterol.values = new Array(dateColumn.length);
+        dataset.Data_TG.values = new Array(dateColumn.length);
+        dataset.Data_LDL.values = new Array(dateColumn.length);
+        dataset.Data_Proteinuria.values = new Array(dateColumn.length);
 
         /* 塞檢測資料進 dataset 陣列 */
         for (var i in inspectionDataList) {
@@ -128,20 +142,84 @@ $(function () {
             var inspectionDate = month + '/' + day;
             var index = dateColumn.indexOf(inspectionDate);
 
-            dataset['Data_Weight'][index] = inspectionDataList[i].Weight;
-            dataset['Data_BloodPressure_L'][index] = inspectionDataList[i].DBP;
-            dataset['Data_BloodPressure_H'][index] = inspectionDataList[i].SBP;
-            dataset['Data_WC'][index] = inspectionDataList[i].Waist;
-            dataset['Data_GH'][index] = inspectionDataList[i].HbA1C;
-            dataset['Data_FBS'][index] = inspectionDataList[i].ACSugar;
-            dataset['Data_UN'][index] = inspectionDataList[i].BUN;
-            dataset['Data_Creatinine'][index] = inspectionDataList[i].Creatinine;
-            dataset['Data_GFR'][index] = inspectionDataList[i].eGFR;
-            dataset['Data_Cholesterol'][index] = inspectionDataList[i].TCH;
-            dataset['Data_TG'][index] = inspectionDataList[i].TG;
-            dataset['Data_LDL'][index] = inspectionDataList[i].LDL;
-            dataset['Data_Proteinuria'][index] = inspectionDataList[i].UACR;
+            dataset.Data_Weight.values[index] = inspectionDataList[i].Weight;
+            dataset.Data_BloodPressure_L.values[index] = inspectionDataList[i].DBP;
+            dataset.Data_BloodPressure_H.values[index] = inspectionDataList[i].SBP;
+            dataset.Data_WC.values[index] = inspectionDataList[i].Waist;
+            dataset.Data_GH.values[index] = inspectionDataList[i].HbA1C;
+            dataset.Data_FBS.values[index] = inspectionDataList[i].ACSugar;
+            dataset.Data_UN.values[index] = inspectionDataList[i].BUN;
+            dataset.Data_Creatinine.values[index] = inspectionDataList[i].Creatinine;
+            dataset.Data_GFR.values[index] = inspectionDataList[i].eGFR;
+            dataset.Data_Cholesterol.values[index] = inspectionDataList[i].TCH;
+            dataset.Data_TG.values[index] = inspectionDataList[i].TG;
+            dataset.Data_LDL.values[index] = inspectionDataList[i].LDL;
+            dataset.Data_Proteinuria.values[index] = inspectionDataList[i].UACR;
         }
+        
+        findMinMaxValue();
+        setMinMaxValue();
+    }
+
+    function findMinMaxValue() {
+        $.each(dataset, function (key, data) {
+            var min = max = null;
+
+            for (var i in data.values) {
+                if (typeof data.values[i] !== 'undefined') {
+                    if (!min && !max)
+                        min = max = data.values[i];
+                    else {
+                        if(min > data.values[i])
+                            min = data.values[i];
+                        if(max < data.values[i])
+                            max = data.values[i];
+                    }
+                }
+            }
+            dataset[key].min = min;
+            dataset[key].max = max;
+        });
+    }
+
+    function setMinMaxValue() {
+        $('#min_weight').text(dataset.Data_Weight.min);
+        $('#max_weight').text(dataset.Data_Weight.max);
+
+        $('#min_SBP').text(dataset.Data_BloodPressure_H.min);
+        $('#max_SBP').text(dataset.Data_BloodPressure_H.max);
+        $('#min_DBP').text(dataset.Data_BloodPressure_L.min);
+        $('#max_DBP').text(dataset.Data_BloodPressure_L.max);
+
+        $('#min_waist').text(dataset.Data_WC.min);
+        $('#max_waist').text(dataset.Data_WC.max);
+
+        $('#min_HbA1C').text(dataset.Data_GH.min);
+        $('#max_HbA1C').text(dataset.Data_GH.max);
+
+        $('#min_ACSugar').text(dataset.Data_FBS.min);
+        $('#max_ACSugar').text(dataset.Data_FBS.max);
+
+        $('#min_BUN').text(dataset.Data_UN.min);
+        $('#max_BUN').text(dataset.Data_UN.max);
+
+        $('#min_creatinine').text(dataset.Data_Creatinine.min);
+        $('#max_creatinine').text(dataset.Data_Creatinine.max);
+
+        $('#min_eGFR').text(dataset.Data_GFR.min);
+        $('#max_eGFR').text(dataset.Data_GFR.max);
+
+        $('#min_TCH').text(dataset.Data_Cholesterol.min);
+        $('#max_TCH').text(dataset.Data_Cholesterol.max);
+
+        $('#min_TG').text(dataset.Data_TG.min);
+        $('#max_TG').text(dataset.Data_TG.max);
+
+        $('#min_LDL').text(dataset.Data_LDL.min);
+        $('#max_LDL').text(dataset.Data_LDL.max);
+
+        $('#min_UACR').text(dataset.Data_Proteinuria.min);
+        $('#max_UACR').text(dataset.Data_Proteinuria.max);
     }
 
     function SetConfig(LB_data, LB_title, DataName) {
@@ -153,7 +231,7 @@ $(function () {
                     label: LB_data,
                     backgroundColor: '#A3D5D2',
                     borderColor: '#A3D5D2',
-                    data: dataset[DataName],
+                    data: dataset[DataName].values,
                     fill: false,
                 }]
             },
@@ -200,14 +278,14 @@ $(function () {
                     label: LB_data,
                     backgroundColor: '#A3D5D2',
                     borderColor: '#A3D5D2',
-                    data: dataset[DataName],
+                    data: dataset[DataName].values,
                     fill: false,
                 }, {
                     label: LB_data2,
                     fill: false,
                     backgroundColor: '#ECD287',
                     borderColor: '#ECD287',
-                    data: dataset[DataName2],
+                    data: dataset[DataName2].values,
                 }]
             },
             options: {
