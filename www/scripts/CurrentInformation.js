@@ -69,7 +69,6 @@ $(function () {
                 async.apply(getInspectionData, token),
                 async.apply(getSportRecord, token, moment(new Date()).format('YYYYMMDD'))
             ], function (err, result) {
-                console.log(result);
                 if (err)
                     alert('系統錯誤，請聯絡系統管理員！');
                 else {
@@ -77,9 +76,9 @@ $(function () {
                         alert('系統錯誤，請聯絡系統管理員！');
                     else {
                         var gender = result[0].Gender;
-                        var kidneyFailureStage = result[1].stage;
+                        sessionStorage.setItem('gender', gender);
 
-                        checkData(gender, kidneyFailureStage);
+                        checkData(gender);
                     }
                 }
 
@@ -210,7 +209,7 @@ $(function () {
     }
 
     /* 檢查各項數據之標準值 */
-    function checkData(gender, kidneyFailureStage) {
+    function checkData(gender) {
         /* 收縮壓 */
         if (parseInt($('#systolicBloodPressure').text()) >= 130)
             $('#systolicBloodPressure').addClass('P_Abnormal');

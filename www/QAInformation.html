@@ -18,7 +18,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="CurrentInformation.html">目前資訊</a>
+                <a class="nav-item nav-link" href="CurrentInformation.html">健康資訊</a>
                 <a class="nav-item nav-link" href="PhysiologicalInformation.html">生理資訊</a>
                 <a class="nav-item nav-link" href="HEInformation.html">衛教資訊</a>
                 <a class="nav-item nav-link" href="Selfhealthassessment.html">自我健康評量</a>
@@ -28,43 +28,59 @@
         <button class="btn btn-dark btn-lg" type="button" id="logout_btn">登出</button>
     </nav>
     <div class="content">
-        <p class="P_Title">Q&A</p>
-        <hr /><br/>
-            <form>
-                <div class="form-group">
-                    <label for="Input_Name">姓名</label>
-                    <input type="text" class="form-control" id="Input_Name" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="Input_Email">EMAIL</label>
-                    <input type="email" class="form-control" id="Input_Email" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="Input_Name">連絡電話</label>
-                    <input type="tel" class="form-control" id="Input_Phone" value="">
-                </div>
-                <div class="form-group">
-                    <label for="Input_Message">Message</label>
-                    <textarea class="form-control" rows="5" id="Input_Message"></textarea>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-sm-6"><input id="Btn_Clear" type="button" value="清空" class="Btn_LWidth"  onclick="Claer()"/></div>
-                    <div class="form-group col-sm-6"><input id="Btn_Send" type="button" value="送出" class="Btn_LWidth" onclick="Send()" /></div>
-                </div>
-            </form>
-</div>
+        <p class="P_Title">代謝症候群個案常見Q&amp;A</p>
+        <hr /><br />
+        <form>
+            <div class="form-row">
+                <table style="line-height:30px;" border="1">
+                    <tbody>
+                        <tr>
+                            <td width="200" height="80" align="center" valign="middle" bgcolor="#FFFFFF">Q1: 什麼是代謝症候群？</td>
+                            <td width="400" height="80" align="center" valign="middle" bgcolor="#FFFFFF">A1:是指腹部肥胖、高血糖、高血壓、血脂異常等一群代謝危險因子群聚現象。但數值尚未達到慢性疾病的標準；換句話說，若有代謝症候群的警訊出現可說是腦血管疾病、心臟病、糖尿病、腎病變、高血壓等慢性疾病的警訊。</td>
+                        </tr>
+                        <tr>
+                            <td width="200" height="80" align="center" valign="middle" bgcolor="#FFFFFF">Q2: 代謝症候群判定標準是什麼？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF"><p>A2: 其判定標準為:20歲以上成人，以下5項危險因子中，腹部肥胖(男性腰圍≧90公分;女性腰圍≧80公分)、血壓偏高(收縮血壓≧130mmHg;舒張血壓≧85mmHg)、空腹血糖偏高(空腹血糖≧100 mg/dl)、高密度酯蛋白膽固醇偏低(男性&lt;40mg/dl;女性&lt;50mg/dl)、三酸甘油酯偏高(三酸甘油酯≧150mg/dl)，若有1項的稱為代謝症候群高危險群；有3項(含)以上者，即可判定為代謝症候群。 </p></td>
+                        </tr>
+                        <tr>
+                            <td width="200" height="80" align="center" valign="middle" bgcolor="#FFFFFF">Q3:代謝症候群導致的原因是什麼？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">A3: 主要原因為現代人生活、飲食型態的改變及體能活動量不足，導致肥胖者日漸增多。腰圍過大之腹部肥胖，代表著內臟脂肪堆積過多。內臟脂肪的活性大，會釋放出游離脂肪酸，產生胰島素阻抗作用，引起代謝異常，進而造成高血糖、高血壓、高血脂等危險因子聚集，並導致代謝症候群發生。</td>
+                        </tr>
+                        <tr>
+                            <td width="200" height="80" align="center" valign="middle" bgcolor="#FFFFFF">Q4: 造成代謝症候群的高危險因素有那些？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF">年齡、遺傳因子、不良的生活型態如，長期食用低纖維、高糖、高油、高鹽飲食習慣的人;體能活動量少的人;長期過度飲酒; 嚼檳榔;心理壓力導致內分泌失、其他危險因素如，年齡大於30歲以上者、未婚女性、無工作、家庭經濟收入低、低教育程度、早發性冠狀動脈疾病之女性。</td>
+                        </tr>
+                        <tr>
+                            <td width="200" height="80" align="center" valign="middle" bgcolor="#FFFFFF">Q5: 要如何預防代謝症候群呢？</td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF"><p>A5: 行政院衛生署國民健康局教我們五絕招，第一招--聰明選、健康吃。第二招--動動手、動動腳。第三招--作檢查、早發現。第四招--不吸菸、少喝酒。第五招--壓力去、活力來。 </p></td>
+                        </tr>
+                        <tr>
+                            <td width="200" height="80" align="center" valign="middle" bgcolor="#FFFFFF"><p>Q6: 體重應該如何控制？ </p></td>
+                            <td width="300" height="80" align="center" valign="middle" bgcolor="#FFFFFF"><p>A6: 健康管理的第一步就是體重控制，而體重控制，就讓我們從食物份量開始；也就說您的健康，決定在您吃的食物份量，建議選擇均衡多樣的飲食與及控制食物份量。天天均衡攝取六大類食物，不偏食，不過量，盡量從天然新鮮的食物攝取充足的營養，確保人體所需營養素不缺乏，從而建立健康飲食的觀念。要避免三高食物。食物要好吃不外乎新鮮及適當的調味，而「高油、高鹽、高糖」常是健康的致命傷。最後也是最重要，運動絕對不可少，除了飲食控制之外需多運動，運動可提高代謝率，有助熱量燃燒幫助減輕體重，體重減輕了也可減少胰島素阻抗。 </p></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </form>
+
+    </div>
+
+    <div class="content">
+        <p class="P_Title">相關網站</p>
+        <hr /><br />
+        <form>
+            <p><a href="http://www.jjmt.com.tw/diabetes/bloodMonitoring.php" target="_blank"><font size="4">糖尿病資訊網</font></a> </p>
+            <p><a href="https://www.ca2-health.com/mets/2016/06/21/%E8%A1%80%E7%B3%96%E5%84%80%E7%9B%A3%E6%B8%AC%E6%95%B8%E6%93%9A%E6%8F%9B%E7%AE%97%E8%A1%A8" target="_blank"><font size="4">中亞健康網-糖尿病常見問題</font></a> </p>
+            <p><a href="https://www.ca2-health.com/mets/2014/07/31/%E9%AB%98%E8%A1%80%E8%84%82%E4%BB%8B%E7%B4%B9" target="_blank"><font size="4">中亞健康網-高血脂-病人Q&amp;A</font></a> </p>
+            <p><a href="http://www.cmuh.cmu.edu.tw/web/FAQ.php" target="_blank"><font size="4">中國醫藥大學附設醫院-常見問題</font></a></p>
+            <p><a href="http://uncontrolled-hypertension.com/%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C/%E9%AB%98%E8%A1%80%E5%A3%93%E6%88%90%E5%9B%A0/" target="_blank"><font size="4">高血壓創新療法衛教網-常見問題</font></a> </p>
+            <p><a href="http://www.ckdlife.com.tw/QA/1/" target="_blank"><font size="4">健康好腎活-護腎Q&A</font></a> </p>
+            <p><a href="http://www.ckd-tsn.org.tw/information/sub.php?sub=2" target="_blank"><font size="4">台灣腎臟醫學會-認識腎臟病問與答Q/A</font></a></p>
+            <p><a href="http://www.ckd-tsn.org.tw/information/sub.php?sub=1" target="_blank"><font size="4">台灣腎臟醫學會-腎臟保健問與答Q/A</font></a> </p>
+        </form>
+
+    </div>
 </body>
 </html>
-<script>
-    function Claer()
-    {
-        $("#Input_Name").val('');
-        $("#Input_Email").val('');
-        $("#Input_Phone").val('');
-        $("#Input_Message").val('');
-    }
-    function Send()
-    {
-        alert('送出成功');
-    }
-</script>

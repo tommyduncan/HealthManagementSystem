@@ -44,6 +44,7 @@ $(function () {
 
                 getInspectionData(token, start.format('YYYY/MM/DD').split('/').join(''), end.format('YYYY/MM/DD').split('/').join(''), function (data) {
                     processDataset(data);
+                    checkData(sessionStorage.getItem('gender'));
 
                     $.LoadingOverlay("hide");
                 });
@@ -85,6 +86,7 @@ $(function () {
 
             getInspectionData(token, startDate.split('/').join(''), endDate.split('/').join(''), function (data) {
                 processDataset(data);
+                checkData(sessionStorage.getItem('gender'));
 
                 $.LoadingOverlay("hide");
             });
@@ -156,7 +158,7 @@ $(function () {
             dataset.Data_LDL.values[index] = inspectionDataList[i].LDL;
             dataset.Data_Proteinuria.values[index] = inspectionDataList[i].UACR;
         }
-        
+
         findMinMaxValue();
         setMinMaxValue();
     }
@@ -170,9 +172,9 @@ $(function () {
                     if (!min && !max)
                         min = max = data.values[i];
                     else {
-                        if(min > data.values[i])
+                        if (min > data.values[i])
                             min = data.values[i];
-                        if(max < data.values[i])
+                        if (max < data.values[i])
                             max = data.values[i];
                     }
                 }
@@ -220,6 +222,76 @@ $(function () {
 
         $('#min_UACR').text(dataset.Data_Proteinuria.min);
         $('#max_UACR').text(dataset.Data_Proteinuria.max);
+    }
+
+    function checkData(gender) {
+        /* 收縮壓 */
+        if (parseInt($('#min_SBP').text()) >= 130)
+            $('#min_SBP').addClass('P_Abnormal');
+        if (parseInt($('#max_SBP').text()) >= 130)
+            $('#max_SBP').addClass('P_Abnormal');
+        /* 舒張壓 */
+        if (parseInt($('#min_DBP').text()) >= 85)
+            $('#min_DBP').addClass('P_Abnormal');
+        if (parseInt($('#max_DBP').text()) >= 85)
+            $('#max_DBP').addClass('P_Abnormal');
+        /* 腰圍 */
+        if (gender == '1') {
+            if (parseInt($('#min_waist').text()) >= 90)
+                $('#min_waist').addClass('P_Abnormal');
+            if (parseInt($('#max_waist').text()) >= 90)
+                $('#max_waist').addClass('P_Abnormal');
+        } else if (gender == '2') {
+            if (parseInt($('#min_waist').text()) >= 80)
+                $('#min_waist').addClass('P_Abnormal');
+            if (parseInt($('#max_waist').text()) >= 80)
+                $('#max_waist').addClass('P_Abnormal');
+        }
+        /* 糖化血色素 */
+        if (parseFloat($('#min_HbA1C').text()) < 4 || parseFloat($('#min_HbA1C').text()) > 6)
+            $('#min_HbA1C').addClass('P_Abnormal');
+        if (parseFloat($('#max_HbA1C').text()) < 4 || parseFloat($('#max_HbA1C').text()) > 6)
+            $('#max_HbA1C').addClass('P_Abnormal');
+        /* 空腹血糖 */
+        if (parseInt($('#min_ACSugar').text()) < 70 || parseInt($('#min_ACSugar').text()) > 110)
+            $('#min_ACSugar').addClass('P_Abnormal');
+        if (parseInt($('#max_ACSugar').text()) < 70 || parseInt($('#max_ACSugar').text()) > 110)
+            $('#max_ACSugar').addClass('P_Abnormal');
+        /* 尿素氮 */
+        if (parseInt($('#min_BUN').text()) < 7 || parseInt($('#min_BUN').text()) > 25)
+            $('#min_BUN').addClass('P_Abnormal');
+        if (parseInt($('#max_BUN').text()) < 7 || parseInt($('#max_BUN').text()) > 25)
+            $('#max_BUN').addClass('P_Abnormal');
+        /* 肌酸酐 */
+        if (parseFloat($('#min_creatinine').text()) < 0.5 || parseFloat($('#min_creatinine').text()) > 1.3)
+            $('#min_creatinine').addClass('P_Abnormal');
+        if (parseFloat($('#max_creatinine').text()) < 0.5 || parseFloat($('#max_creatinine').text()) > 1.3)
+            $('#max_creatinine').addClass('P_Abnormal');
+        /* 腎絲球過濾率 */
+        if (parseInt($('#min_eGFR').text()) < 100)
+            $('#min_eGFR').addClass('P_Abnormal');
+        if (parseInt($('#max_eGFR').text()) < 100)
+            $('#max_eGFR').addClass('P_Abnormal');
+        /* 總膽固醇 */
+        if (parseInt($('#min_TCH').text()) < 110 || parseInt($('#min_TCH').text()) > 200)
+            $('#min_TCH').addClass('P_Abnormal');
+        if (parseInt($('#max_TCH').text()) < 110 || parseInt($('#max_TCH').text()) > 200)
+            $('#max_TCH').addClass('P_Abnormal');
+        /* 三酸甘油酯 */
+        if (parseInt($('#min_TG').text()) >= 150)
+            $('#min_TG').addClass('P_Abnormal');
+        if (parseInt($('#max_TG').text()) >= 150)
+            $('#max_TG').addClass('P_Abnormal');
+        /* 低密度脂蛋白 */
+        if (parseInt($('#min_LDL').text()) < 0 || parseInt($('#min_LDL').text()) > 130)
+            $('#min_LDL').addClass('P_Abnormal');
+        if (parseInt($('#max_LDL').text()) < 0 || parseInt($('#max_LDL').text()) > 130)
+            $('#max_LDL').addClass('P_Abnormal');
+        /* 蛋白尿 */
+        if (parseInt($('#min_UACR').text()) < 150)
+            $('#min_UACR').addClass('P_Abnormal');
+        if (parseInt($('#max_UACR').text()) < 150)
+            $('#max_UACR').addClass('P_Abnormal');
     }
 
     function SetConfig(LB_data, LB_title, DataName) {
